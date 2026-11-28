@@ -49,7 +49,13 @@
   <header class="sticky top-0 z-40 border-b border-slate-200/80 dark:border-slate-800/80 bg-white/85 dark:bg-slate-950/85 glass-card">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
       <a href="#overview" class="flex items-center gap-2.5 font-bold tracking-tight text-slate-900 dark:text-white shrink-0">
-        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-500 to-emerald-500 text-white flex items-center justify-center font-mono text-sm font-bold shadow-sm">AG</span>
+        <img
+          src="./MY PIC.jpeg"
+          alt="Alamanda Ganesh"
+          class="w-8 h-8 rounded-lg object-cover object-top"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <span style="display:none;" class="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-500 to-emerald-500 text-white items-center justify-center font-mono text-sm font-bold shadow-sm">AG</span>
         <span class="hidden sm:inline">Alamanda Ganesh</span>
       </a>
 
@@ -89,7 +95,7 @@
       <a href="#skills" class="mobile-nav-link block py-1.5 text-slate-700 dark:text-slate-200">Core Skills</a>
       <a href="#experience" class="mobile-nav-link block py-1.5 text-slate-700 dark:text-slate-200">Experience</a>
       <a href="#projects" class="mobile-nav-link block py-1.5 text-slate-700 dark:text-slate-200">Projects</a>
-      <a href="#education" class="mobile-nav-link block py-1.5 text-slate-700 dark:text-slate-200">Education &amp; Awards</a>
+      <a href="#education" class="mobile-nav-link block py-1.5 text-slate-700 dark:text-slate-200">Education & Awards</a>
       <a href="#contact" class="mobile-nav-link block py-1.5 text-sky-600 dark:text-sky-400">Contact</a>
     </div>
   </header>
@@ -99,6 +105,7 @@
     <section id="overview" class="relative grid-bg border-b border-slate-200/80 dark:border-slate-800/80">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Left Column: Intro, Bio & Actions -->
           <div class="lg:col-span-7 space-y-6">
             <div class="inline-flex flex-wrap items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/25 text-sky-700 dark:text-sky-300 text-xs font-medium">
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -115,7 +122,7 @@
             </div>
 
             <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-              Data Analytics Engineer with nearly 2 years of experience building ETL pipelines, AWS S3 data lakes, and KPI dashboards that turn raw data into business decisions. Skilled in <strong class="text-slate-900 dark:text-white font-semibold">SQL, Python, Databricks (PySpark), Delta Lake, Alteryx, Power BI, Tableau,</strong> and <strong class="text-slate-900 dark:text-white font-semibold">Looker Studio</strong> across leadership and CFO reporting.
+              Data Analytics Engineer with nearly 2 years of experience building ETL pipelines, AWS S3 data lakes, and KPI dashboards that turn raw data into business decisions. Skilled in <strong class="text-slate-900 dark:text-white font-semibold">SQL, Python, Databricks (PySpark), Delta Lake, GenAI Workflow Automation, Alteryx, Power BI, Tableau,</strong> and <strong class="text-slate-900 dark:text-white font-semibold">Looker Studio</strong> across leadership and CFO reporting.
             </p>
 
             <!-- Role Lens Switcher -->
@@ -167,15 +174,27 @@
             </div>
           </div>
 
-          <!-- Right Column: Verified Impact Chart -->
-          <div class="lg:col-span-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm">
-            <div class="flex items-center justify-between gap-2 mb-1">
-              <h2 class="text-sm font-bold uppercase tracking-wider text-slate-800 dark:text-slate-100">Measured Business Impact</h2>
-              <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Verified Metrics</span>
+          <!-- Right Column: Compact Proportional Portrait + Verified Impact Chart -->
+          <div class="lg:col-span-5 space-y-5">
+            <!-- Proportional 4:5 Portrait (~10% shorter, natural proportions) -->
+            <div class="flex justify-center lg:justify-end">
+              <img
+                src="./MY PIC.jpeg"
+                alt="Alamanda Ganesh — Data Analytics Engineer"
+                class="w-44 sm:w-48 aspect-[4/5] object-cover object-top rounded-2xl shadow-lg"
+              />
             </div>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Quantified outcomes delivered across Pro-Vigil Inc &amp; Give India</p>
-            <div class="relative h-72">
-              <canvas id="impactChart"></canvas>
+
+            <!-- Verified Impact Chart Card -->
+            <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <h2 class="text-sm font-bold uppercase tracking-wider text-slate-800 dark:text-slate-100">Measured Business Impact</h2>
+                <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Verified Metrics</span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Quantified outcomes delivered across Pro-Vigil Inc & Give India</p>
+              <div class="relative h-56">
+                <canvas id="impactChart"></canvas>
+              </div>
             </div>
           </div>
         </div>
@@ -196,7 +215,7 @@
           </div>
           <div class="rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4">
             <div class="text-2xl sm:text-3xl font-extrabold font-mono text-amber-600 dark:text-amber-400">25%</div>
-            <div class="mt-1 text-xs font-medium text-slate-600 dark:text-slate-300">Engagement lift via Power BI &amp; Canva</div>
+            <div class="mt-1 text-xs font-medium text-slate-600 dark:text-slate-300">Engagement lift via Power BI & Canva</div>
           </div>
           <div class="col-span-2 sm:col-span-1 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4">
             <div class="text-2xl sm:text-3xl font-extrabold font-mono text-rose-600 dark:text-rose-400">18%</div>
@@ -222,8 +241,8 @@
             <span class="text-xs font-mono font-bold text-sky-600 dark:text-sky-400">01 / INGEST</span>
             <i data-lucide="database" class="w-4 h-4 text-sky-500"></i>
           </div>
-          <div class="mt-2 font-bold text-slate-900 dark:text-white">Data Sources &amp; APIs</div>
-          <div class="mt-1 text-xs text-slate-600 dark:text-slate-400">S3, MySQL, spreadsheets, APIs, CRM &amp; Zendesk</div>
+          <div class="mt-2 font-bold text-slate-900 dark:text-white">Data Sources & APIs</div>
+          <div class="mt-1 text-xs text-slate-600 dark:text-slate-400">S3, MySQL, spreadsheets, APIs, CRM & Zendesk</div>
         </button>
 
         <button type="button" data-stage="etl" class="stage-btn text-left p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-sky-500/50 transition-all">
@@ -231,17 +250,17 @@
             <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400">02 / TRANSFORM</span>
             <i data-lucide="workflow" class="w-4 h-4 text-emerald-500"></i>
           </div>
-          <div class="mt-2 font-bold text-slate-900 dark:text-white">ETL &amp; Validation</div>
-          <div class="mt-1 text-xs text-slate-600 dark:text-slate-400">Automated pipelines, anomaly checks &amp; QA</div>
+          <div class="mt-2 font-bold text-slate-900 dark:text-white">ETL & Validation</div>
+          <div class="mt-1 text-xs text-slate-600 dark:text-slate-400">Automated pipelines, anomaly checks & QA</div>
         </button>
 
         <button type="button" data-stage="warehouse" class="stage-btn text-left p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-sky-500/50 transition-all">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400">03 / STORE &amp; SCALE</span>
+            <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400">03 / STORE & SCALE</span>
             <i data-lucide="server" class="w-4 h-4 text-violet-500"></i>
           </div>
-          <div class="mt-2 font-bold text-slate-900 dark:text-white">Data Lake &amp; Lakehouse</div>
-          <div class="mt-1 text-xs text-slate-600 dark:text-slate-400">Medallion Delta layers, Spark &amp; SQL via JDBC</div>
+          <div class="mt-2 font-bold text-slate-900 dark:text-white">Data Lake & Lakehouse</div>
+          <div class="mt-1 text-xs text-slate-600 dark:text-slate-400">Medallion Delta layers, Spark & SQL via JDBC</div>
         </button>
 
         <button type="button" data-stage="bi" class="stage-btn text-left p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-sky-500/50 transition-all">
@@ -249,8 +268,8 @@
             <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400">04 / DELIVER</span>
             <i data-lucide="bar-chart-3" class="w-4 h-4 text-amber-500"></i>
           </div>
-          <div class="mt-2 font-bold text-slate-900 dark:text-white">BI &amp; Executive Reporting</div>
-          <div class="mt-1 text-xs text-slate-600 dark:text-slate-400">KPI scorecards, QBRs &amp; CFO unit economics</div>
+          <div class="mt-2 font-bold text-slate-900 dark:text-white">BI & Executive Reporting</div>
+          <div class="mt-1 text-xs text-slate-600 dark:text-slate-400">KPI scorecards, QBRs & CFO unit economics</div>
         </button>
       </div>
 
@@ -264,7 +283,7 @@
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
         <div>
           <span class="text-xs font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 font-semibold">Technical Arsenal</span>
-          <h2 class="mt-1 text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Core Skills &amp; Platforms</h2>
+          <h2 class="mt-1 text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Core Skills & Platforms</h2>
         </div>
         <div class="relative w-full md:w-72">
           <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
@@ -275,9 +294,9 @@
       <div class="flex flex-wrap gap-2 mb-6" id="skill-category-filters">
         <button type="button" data-skill-cat="all" class="skill-cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white">All Categories</button>
         <button type="button" data-skill-cat="engineering" class="skill-cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Data Engineering</button>
-        <button type="button" data-skill-cat="bi" class="skill-cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">BI &amp; Visualization</button>
-        <button type="button" data-skill-cat="databases" class="skill-cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Databases &amp; Storage</button>
-        <button type="button" data-skill-cat="analytics" class="skill-cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Governance &amp; Analytics</button>
+        <button type="button" data-skill-cat="bi" class="skill-cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">BI & Visualization</button>
+        <button type="button" data-skill-cat="databases" class="skill-cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Databases & Storage</button>
+        <button type="button" data-skill-cat="analytics" class="skill-cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Governance & Analytics</button>
       </div>
 
       <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -302,7 +321,7 @@
     <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 border-b border-slate-200/80 dark:border-slate-800/80">
       <div class="mb-8">
         <span class="text-xs font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 font-semibold">Case Studies</span>
-        <h2 class="mt-1 text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Featured Projects &amp; Pipelines</h2>
+        <h2 class="mt-1 text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Featured Projects & Pipelines</h2>
         <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Select any project to view its data architecture, KPIs, and business outcomes.</p>
       </div>
 
@@ -363,8 +382,8 @@
         <!-- Certifications & Awards -->
         <div class="lg:col-span-6 space-y-4">
           <div>
-            <span class="text-xs font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 font-semibold">Credentials &amp; Recognition</span>
-            <h2 class="mt-1 text-2xl font-bold text-slate-900 dark:text-white">Certifications &amp; Awards</h2>
+            <span class="text-xs font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 font-semibold">Credentials & Recognition</span>
+            <h2 class="mt-1 text-2xl font-bold text-slate-900 dark:text-white">Certifications & Awards</h2>
           </div>
 
           <div class="space-y-3">
@@ -396,7 +415,7 @@
             </div>
 
             <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 space-y-3">
-              <h3 class="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">Technical Certifications &amp; Languages</h3>
+              <h3 class="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">Technical Certifications & Languages</h3>
               <div class="flex items-center gap-3">
                 <i data-lucide="badge-check" class="w-4 h-4 text-sky-500 shrink-0"></i>
                 <span class="text-sm font-medium text-slate-800 dark:text-slate-200">SQL Complete Beginner to Master <span class="text-slate-500 dark:text-slate-400">(IIHT)</span></span>
@@ -572,13 +591,13 @@
         title: 'Programming & Querying',
         category: 'engineering',
         role: 'both',
-        items: ['SQL', 'Python', 'Pandas', 'NumPy', 'Matplotlib', 'PySpark', 'DAX', 'Stored Procedures']
+        items: ['SQL', 'Python', 'Pandas', 'PySpark', 'DAX', 'Stored Procedures']
       },
       {
         title: 'Data Engineering',
         category: 'engineering',
         role: 'de',
-        items: ['Databricks', 'Apache Spark', 'Delta Lake', 'Apache Airflow', 'Alteryx', 'ETL/ELT Pipelines', 'Medallion Architecture', 'JDBC', 'API Integration']
+        items: ['Databricks', 'Apache Spark', 'Delta Lake', 'Apache Airflow', 'GenAI Workflow Automation', 'Alteryx', 'ETL/ELT Pipelines', 'Medallion Architecture', 'JDBC', 'API Integration']
       },
       {
         title: 'Databases & Storage',
@@ -602,7 +621,7 @@
         title: 'Analytics & Tools',
         category: 'analytics',
         role: 'da',
-        items: ['Exploratory Data Analysis (EDA)', 'Statistical Analysis', 'Root Cause Analysis', 'Report Automation', 'Advanced Excel', 'Pivot Tables', 'XLOOKUP', 'INDEX MATCH', 'Google Sheets', 'Salesforce', 'Zendesk', 'Version Control']
+        items: ['Exploratory Data Analysis (EDA)', 'Statistical Analysis', 'Root Cause Analysis', 'Report Automation', 'Advanced Excel', 'Pivot Tables', 'XLOOKUP', 'INDEX MATCH', 'Google Sheets', 'Salesforce', 'Zendesk', 'Version Control', 'Stakeholder Management']
       }
     ];
 
@@ -882,7 +901,7 @@
           <div class="text-xs sm:text-sm font-mono font-medium text-sky-700 dark:text-sky-300">${p.architecture}</div>
         </div>
         <div>
-          <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Key Deliverables &amp; Outcomes</h4>
+          <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Key Deliverables & Outcomes</h4>
           <ul class="space-y-2">
             ${p.highlights.map(h => `
               <li class="flex items-start gap-2">
@@ -956,7 +975,7 @@
               'rgba(244, 63, 94, 0.85)'
             ],
             borderRadius: 8,
-            barThickness: 22
+            barThickness: 20
           }]
         },
         options: {
